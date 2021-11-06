@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ResumeCreator
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для InformationWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class InformationWindow : Window
     {
-        public MainWindow()
+        public InformationWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var infoWindow = new InformationWindow();
-            infoWindow.Show();
         }
     }
 }
