@@ -5,27 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResumeCreator"
         mc:Ignorable="d"
-        Title="InformationWindow" Height="450" Width="800">
+        Title="InformationWindow" Height="454" Width="777">
     <Grid>
-        <TabControl>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="218*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.RowSpan="2">
 
             <TabItem Header="Общая информация">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox HorizontalAlignment="Left" Margin="123,56,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="585,52,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Label" HorizontalAlignment="Left" Margin="37,52,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="123,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Должность" HorizontalAlignment="Left" Margin="37,52,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Желаемая зарплата" HorizontalAlignment="Left" Margin="37,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.093,-0.32"/>
+                    <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="37,145,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="170,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <CheckBox Content="Да/Нет" HorizontalAlignment="Left" Margin="219,246,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="37,241,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Телефон" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
+                    <TextBox HorizontalAlignment="Left" Margin="123,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+                    <Label Content="Занятость" HorizontalAlignment="Left" Margin="37,294,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+                    <Label Content="тыс. рублей" HorizontalAlignment="Left" Margin="301,97,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Личная информация">
                 <Grid Background="#FFE5E5E5">
-                    <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="369,124,0,0" VerticalAlignment="Top"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="102*"/>
+                        <ColumnDefinition Width="155*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Имя" HorizontalAlignment="Left" Margin="276,53,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Отчество" HorizontalAlignment="Left" Margin="186,53,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Margin="115,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="31,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Margin="283,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <Label Content="Город проживания" HorizontalAlignment="Left" Margin="37,89,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="175,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.552,-0.062"/>
+                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="37,131,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Да/Нет" HorizontalAlignment="Left" Margin="199,137,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="37,171,0,0" VerticalAlignment="Top"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="159,171,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDateFormat="Short"/>
+                    <Label Content="Пол" HorizontalAlignment="Left" Margin="37,205,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="159,209,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Label Content="Семейное положение" HorizontalAlignment="Left" Margin="37,246,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="209,248,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+                    <Label Content="Есть дети" HorizontalAlignment="Left" Margin="36,286,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="Да/Нет" HorizontalAlignment="Left" Margin="138,291,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Образование">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="36,54,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Год окончания" HorizontalAlignment="Left" Margin="36,94,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="36,134,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="36,179,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="36,220,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="181,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="181,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="181,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="181,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="181,222,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Опыт работы">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Организация" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="141,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Должность" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="141,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>

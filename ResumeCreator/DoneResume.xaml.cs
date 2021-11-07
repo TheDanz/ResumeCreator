@@ -14,19 +14,14 @@ using System.Windows.Shapes;
 
 namespace ResumeCreator
 {
-    /// <summary>
-    /// Логика взаимодействия для InformationWindow.xaml
-    /// </summary>
-    public partial class InformationWindow : Window
-    {
-        public InformationWindow()
-        {
-            InitializeComponent();
-        }
-
-		private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+	/// <summary>
+	/// Логика взаимодействия для DoneResume.xaml
+	/// </summary>
+	public partial class DoneResume : Window
+	{
+		public DoneResume()
 		{
-
+			InitializeComponent();
 		}
 	}
 }
