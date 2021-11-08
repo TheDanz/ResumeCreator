@@ -29,6 +29,7 @@ namespace ResumeCreator
         {
             var infoWindow = new InformationWindow();
             infoWindow.Show();
+            this.Close();
         }
     }
 }

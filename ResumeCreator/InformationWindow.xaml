@@ -39,7 +39,7 @@
                     <Label Content="Фамилия" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top"/>
                     <Label Content="Имя" HorizontalAlignment="Left" Margin="276,53,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
                     <Label Content="Отчество" HorizontalAlignment="Left" Margin="186,53,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Margin="115,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox  HorizontalAlignment="Left" Margin="115,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <TextBox HorizontalAlignment="Left" Margin="31,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
                     <TextBox HorizontalAlignment="Left" Margin="283,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
                     <Label Content="Город проживания" HorizontalAlignment="Left" Margin="37,89,0,0" VerticalAlignment="Top"/>
@@ -76,6 +76,7 @@
                     <TextBox HorizontalAlignment="Left" Margin="141,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Должность" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top"/>
                     <TextBox HorizontalAlignment="Left" Margin="141,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Готово" HorizontalAlignment="Left" Margin="551,285,0,0" VerticalAlignment="Top" Height="40" Width="67" Click="Button_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

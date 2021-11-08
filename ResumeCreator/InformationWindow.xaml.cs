@@ -28,5 +28,11 @@ namespace ResumeCreator
 		{
 
 		}
-	}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var doneResumeWindow = new DoneResumeWindow(this);
+            doneResumeWindow.Show();
+        }
+    }
 }

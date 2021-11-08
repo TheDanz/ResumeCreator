@@ -48,3 +48,9 @@ C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-wind
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ref\ResumeCreator.dll
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.pdb
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.genruntimeconfig.cache
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DoneResumeWindow.g.cs
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DoneResumeWindow.baml
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\bin\Debug\net5.0-windows\sample.docx
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\Interop.Office2013CustomActionsLib.dll
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.csproj.ResolveComReference.cache
