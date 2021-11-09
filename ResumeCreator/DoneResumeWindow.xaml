@@ -11,6 +11,8 @@
         <Button Content="Вывести готовое резюме на экран" HorizontalAlignment="Left" Margin="54,193,0,0" VerticalAlignment="Top" Height="142" Click="DisplayOutput_Click"/>
         <Button Content="Сохранить готовое резюме в PDF" HorizontalAlignment="Center" Margin="0,197,0,0" VerticalAlignment="Top" Height="138" Click="PDFOutput_Click"/>
         <Button Content="Отправить резюме по почте" HorizontalAlignment="Left" Margin="554,193,0,0" VerticalAlignment="Top" Height="142" Click="MailOutput_Click"/>
+        <TextBox Name="textBoxUserMail" HorizontalAlignment="Left" Margin="574,383,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter your mail:" HorizontalAlignment="Left" Margin="588,352,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

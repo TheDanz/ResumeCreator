@@ -1,46 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Word = Microsoft.Office.Interop.Word;
-using System.Reflection;
 using Microsoft.Win32;
+using System.Net.Mail;
+using System.Net;
 
 namespace ResumeCreator
 {
     public partial class DoneResumeWindow : Window
     {
         InformationWindow informationWindow;
+        Dictionary<string, string> items;
         public DoneResumeWindow(InformationWindow informationWindow)
         {
             this.informationWindow = informationWindow;
+            FillInItems();
             InitializeComponent();
         }
 
-        private void DisplayOutput_Click(object sender, RoutedEventArgs e)
+        public void FillInItems()
         {
-
-        }
-
-        private void PDFOutput_Click(object sender, RoutedEventArgs e)
-        {
-            string filePath = null;
-            SaveFileDialog sfd = new SaveFileDialog();
-            if (sfd.ShowDialog() == true)
-            {
-                filePath = sfd.FileName;
-            }
-            var helper = new WordHelper("Sample.docx", filePath);
-            var items = new Dictionary<string, string>
+            this.items = new Dictionary<string, string>
             {
                 { "<teg1>", informationWindow.textBoxSecondName.Text}, //фамилия
                 { "<teg2>", informationWindow.textBoxFirstName.Text}, //имя
@@ -64,15 +44,50 @@ namespace ResumeCreator
                 { "<teg20>", informationWindow.textBoxLastPosition.Text}, //должность
                 { "<teg21>", informationWindow.textBoxMail.Text}, //электронная почта
                 { "<teg22>", informationWindow.textBoxPhone.Text}, //телефон
-
-
             };
+        }
+
+        private void DisplayOutput_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PDFOutput_Click(object sender, RoutedEventArgs e)
+        {
+            string filePath = null;
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == true)
+            {
+                filePath = sfd.FileName;
+            }
+            var helper = new WordHelper("Sample.docx", filePath);
             helper.Process(items);
         }
 
         private void MailOutput_Click(object sender, RoutedEventArgs e)
         {
+            var helper = new WordHelper("Sample.docx", @"C:\Users\Danil\Desktop\fpg");
+            helper.Process(items);
+            try
+            {
+                MailAddress from = new MailAddress("resume.creator723@gmail.com", "ResumeCreator");
+                MailAddress to = new MailAddress(this.textBoxUserMail.Text);
+                MailMessage m = new MailMessage(from, to);
+                m.Subject = "ResumeCreator";
+                m.Body = "<h2>Your resume is attached</h2>";
+                m.IsBodyHtml = true;
+                m.Attachments.Add(new Attachment(@"C:\Users\Danil\Desktop\fpg.pdf"));
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                smtp.Credentials = new NetworkCredential("resume.creator723@gmail.com", "ContestOneLove");
+                smtp.EnableSsl = true;
+                smtp.Send(m);
+                MessageBox.Show("Message sent");
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
