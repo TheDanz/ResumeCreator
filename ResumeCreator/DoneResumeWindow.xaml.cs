@@ -42,17 +42,30 @@ namespace ResumeCreator
             var helper = new WordHelper("Sample.docx", filePath);
             var items = new Dictionary<string, string>
             {
-                { "<teg1>", informationWindow.textBoxSecondName.Text},
-                { "<teg2>", informationWindow.textBoxFirstName.Text},
-                { "<teg3>", informationWindow.textBoxThirdName.Text},
-                { "<teg4>", informationWindow.textBoxPosition.Text},
-                { "<teg5>", informationWindow.textBoxSalary.Text},
-                { "<teg6>", informationWindow.textBoxMail.Text},
-                { "<teg7>", informationWindow.textBoxPhone.Text},
-                { "<teg8>", informationWindow.textBoxCity.Text},
-                { "<teg9>", informationWindow.textBoxUniversity.Text}
-                
-                
+                { "<teg1>", informationWindow.textBoxSecondName.Text}, //фамилия
+                { "<teg2>", informationWindow.textBoxFirstName.Text}, //имя
+                { "<teg3>", informationWindow.textBoxThirdName.Text}, //отчество
+               // { "<teg4>", informationWindow.}, //дата рождения
+                { "<teg5>", informationWindow.Pol.Text}, //пол
+                { "<teg6>", informationWindow.textBoxCity.Text}, //город
+                { "<teg7>", informationWindow.textBoxPosition.Text}, //должность
+                { "<teg8>", informationWindow.textBoxSalary.Text}, //зарплата
+                { "<teg9>", informationWindow.Occupation.Text}, //занятость
+                { "<teg10>", new string ((bool) informationWindow.ReadyToMove.IsChecked ? "Да" : "Нет") }, //переезд
+                { "<teg11>", new string ((bool) informationWindow.ReadyToWorkOut.IsChecked ? "Да" : "Нет")}, //командировки
+                { "<teg12>", informationWindow.Marry.Text}, //семейное положение
+                { "<teg13>", new string ((bool) informationWindow.Children.IsChecked ? "Да" : "Нет")}, //дети
+                { "<teg14>", informationWindow.textBoxUniversity.Text}, //университет
+                { "<teg15>", informationWindow.textBoxYearOfEnding.Text}, //год окончания
+                { "<teg16>", informationWindow.textBoxFaculty.Text}, //факультет
+                { "<tag17>",informationWindow.textBoxSpeciality.Text },
+                { "<teg18", informationWindow.FormOfEducation.Text}, //форма обучения
+                { "<teg19>", informationWindow.textBoxOrganiztion.Text}, //организация
+                { "<teg20>", informationWindow.textBoxLastPosition.Text}, //должность
+                { "<teg21>", informationWindow.textBoxMail.Text}, //электронная почта
+                { "<teg22>", informationWindow.textBoxPhone.Text}, //телефон
+
+
             };
             helper.Process(items);
         }

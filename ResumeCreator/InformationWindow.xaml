@@ -25,66 +25,72 @@
                     <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="37,145,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="textBoxSalary" HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
                     <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="170,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-                    <CheckBox Content="Да/Нет" HorizontalAlignment="Left" Margin="8,246,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <CheckBox Name ="ReadyToWorkOut" Content="Да/Нет" HorizontalAlignment="Left" Margin="8,246,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                     <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="37,241,0,0" VerticalAlignment="Top"/>
                     <Label Content="Телефон" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
                     <TextBox Name="textBoxPhone" HorizontalAlignment="Left" Margin="123,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Grid.ColumnSpan="2"/>
                     <Label Content="Занятость" HorizontalAlignment="Left" Margin="37,294,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <ComboBox Name="Occupation" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Grid.ColumnSpan="2"/>
                     <Label Content="тыс. рублей" HorizontalAlignment="Left" Margin="90,97,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Личная информация">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="102*"/>
-                        <ColumnDefinition Width="155*"/>
+                        <ColumnDefinition Width="41*"/>
+                        <ColumnDefinition Width="265*"/>
+                        <ColumnDefinition Width="465*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Имя" HorizontalAlignment="Left" Margin="276,53,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-                    <Label Content="Отчество" HorizontalAlignment="Left" Margin="186,53,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                    <TextBox Name="textBoxSecondName" HorizontalAlignment="Left" Margin="115,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxFirstName" HorizontalAlignment="Left" Margin="31,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-                    <TextBox Name="textBoxThirdName" HorizontalAlignment="Left" Margin="283,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-                    <Label Content="Город проживания" HorizontalAlignment="Left" Margin="37,89,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxCity" HorizontalAlignment="Left" Margin="175,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.552,-0.062"/>
-                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="37,131,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Да/Нет" HorizontalAlignment="Left" Margin="199,137,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="37,171,0,0" VerticalAlignment="Top"/>
-                    <DatePicker HorizontalAlignment="Left" Margin="159,171,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDateFormat="Short"/>
-                    <Label Content="Пол" HorizontalAlignment="Left" Margin="37,205,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="159,209,0,0" VerticalAlignment="Top" Width="100"/>
-                    <Label Content="Семейное положение" HorizontalAlignment="Left" Margin="37,246,0,0" VerticalAlignment="Top"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="209,248,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
-                    <Label Content="Есть дети" HorizontalAlignment="Left" Margin="36,286,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Да/Нет" HorizontalAlignment="Left" Margin="138,291,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Имя" HorizontalAlignment="Left" Margin="235,53,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Label Content="Отчество" HorizontalAlignment="Left" Margin="186,53,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+                    <TextBox Name="textBoxSecondName" HorizontalAlignment="Left" Margin="74,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox Name="textBoxFirstName" HorizontalAlignment="Left" Margin="31,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <TextBox Name="textBoxThirdName" HorizontalAlignment="Left" Margin="283,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2"/>
+                    <Label Content="Город проживания" HorizontalAlignment="Left" Margin="37,89,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <TextBox Name="textBoxCity" HorizontalAlignment="Left" Margin="134,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.552,-0.062" Grid.Column="1"/>
+                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="37,131,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <CheckBox Name="ReadyToMove" Content="Да/Нет"  HorizontalAlignment="Left" Margin="158,137,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="37,171,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="118,171,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDateFormat="Short" Grid.Column="1"/>
+                    <Label Content="Пол" HorizontalAlignment="Left" Margin="37,205,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <ComboBox Name="Pol" HorizontalAlignment="Left" Margin="118,209,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+                    <Label Content="Семейное положение" HorizontalAlignment="Left" Margin="37,246,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <ComboBox Name="Marry" HorizontalAlignment="Left" Margin="168,248,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Label Content="Есть дети" HorizontalAlignment="Left" Margin="36,286,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <CheckBox Name="Children" Content="Да/Нет" HorizontalAlignment="Left" Margin="97,291,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Образование">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="152*"/>
-                        <ColumnDefinition Width="105*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="386*"/>
+                        <ColumnDefinition Width="315*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="36,54,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Год окончания" HorizontalAlignment="Left" Margin="36,94,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="36,134,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="36,179,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="36,220,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxUniversity" HorizontalAlignment="Left" Margin="181,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxYearOfEnding" HorizontalAlignment="Left" Margin="181,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxFaculty" HorizontalAlignment="Left" Margin="181,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxSpeciality" HorizontalAlignment="Left" Margin="181,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="181,222,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="36,54,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Год окончания" HorizontalAlignment="Left" Margin="36,94,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="36,134,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="36,179,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="36,220,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <TextBox Name="textBoxUniversity" HorizontalAlignment="Left" Margin="111,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox Name="textBoxYearOfEnding" HorizontalAlignment="Left" Margin="111,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox Name="textBoxFaculty" HorizontalAlignment="Left" Margin="111,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox Name="textBoxSpeciality" HorizontalAlignment="Left" Margin="111,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <ComboBox Name ="FormOfEducation" HorizontalAlignment="Left" Margin="111,222,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Опыт работы">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="295*"/>
+                        <ColumnDefinition Width="476*"/>
+                    </Grid.ColumnDefinitions>
                     <Label Content="Организация" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="textBoxOrganiztion" HorizontalAlignment="Left" Margin="141,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Должность" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="textBoxLastPosition" HorizontalAlignment="Left" Margin="141,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button Content="Готово" HorizontalAlignment="Left" Margin="154,246,0,0" VerticalAlignment="Top" Height="40" Width="68" Click="Button_Click"/>
+                    <Button Content="Готово" HorizontalAlignment="Left" Margin="370,347,0,0" VerticalAlignment="Top" Height="40" Width="68" Click="Button_Click" Grid.Column="1"/>
                 </Grid>
             </TabItem>
         </TabControl>
