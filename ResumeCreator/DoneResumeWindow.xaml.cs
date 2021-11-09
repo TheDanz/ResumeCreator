@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
+using Microsoft.Win32;
 
 namespace ResumeCreator
 {
@@ -32,7 +33,13 @@ namespace ResumeCreator
 
         private void PDFOutput_Click(object sender, RoutedEventArgs e)
         {
-            var helper = new WordHelper("Sample.docx");
+            string filePath = null;
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == true)
+            {
+                filePath = sfd.FileName;
+            }
+            var helper = new WordHelper("Sample.docx", filePath);
             var items = new Dictionary<string, string>
             {
                 { "teg1", "SUDA TEXTBOX1"},
