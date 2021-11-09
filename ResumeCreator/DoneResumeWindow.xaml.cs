@@ -42,10 +42,17 @@ namespace ResumeCreator
             var helper = new WordHelper("Sample.docx", filePath);
             var items = new Dictionary<string, string>
             {
-                { "teg1", "SUDA TEXTBOX1"},
-                { "teg2", "SUDA TEXTBOX2"},
-                { "teg3", "SUDA TEXTBOX3"},
-                { "teg4", "SUDA TEXTBOX4"}
+                { "<teg1>", informationWindow.textBoxSecondName.Text},
+                { "<teg2>", informationWindow.textBoxFirstName.Text},
+                { "<teg3>", informationWindow.textBoxThirdName.Text},
+                { "<teg4>", informationWindow.textBoxPosition.Text},
+                { "<teg5>", informationWindow.textBoxSalary.Text},
+                { "<teg6>", informationWindow.textBoxMail.Text},
+                { "<teg7>", informationWindow.textBoxPhone.Text},
+                { "<teg8>", informationWindow.textBoxCity.Text},
+                { "<teg9>", informationWindow.textBoxUniversity.Text}
+                
+                
             };
             helper.Process(items);
         }
