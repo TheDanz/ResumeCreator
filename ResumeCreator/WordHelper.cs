@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
@@ -10,22 +9,12 @@ namespace ResumeCreator
     class WordHelper
     {
         private FileInfo _fileInfo;
-        private string _filePath;
 
-        public WordHelper(string fileName, string filePath)
+        public WordHelper(string fileName)
         {
-            _filePath = filePath;
             _fileInfo = new FileInfo(fileName);
         }
 
-        protected void ConvertToPDF()
-        {
-            Word.Application appWord = new Word.Application();
-            string path = AppDomain.CurrentDomain.BaseDirectory;
-            var wordDocument = appWord.Documents.Open(path + @"\1Sample.docx");
-            wordDocument.ExportAsFixedFormat(_filePath + @".pdf", Word.WdExportFormat.wdExportFormatPDF);
-            wordDocument.Close();
-        }
         internal bool Process(Dictionary<string, string> items)
         {
             Word.Application app = null;
@@ -53,13 +42,15 @@ namespace ResumeCreator
                         ReplaceWith: missing,
                         Replace: replace);
                 }
-                Object newFileName = Path.Combine(_fileInfo.DirectoryName, "1" + _fileInfo.Name);
+                Object newFileName = Path.Combine(_fileInfo.DirectoryName, "Ready" + _fileInfo.Name);
                 app.ActiveDocument.SaveAs2(newFileName);
                 app.ActiveDocument.Close();
-                ConvertToPDF();
                 return true;
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
             finally
             {
                 if (app != null)

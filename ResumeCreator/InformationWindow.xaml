@@ -30,7 +30,7 @@
                     <Label Content="Телефон" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
                     <TextBox Name="textBoxPhone" HorizontalAlignment="Left" Margin="123,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Grid.ColumnSpan="2"/>
                     <Label Content="Занятость" HorizontalAlignment="Left" Margin="37,294,0,0" VerticalAlignment="Top"/>
-                    <ComboBox Name="Occupation" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <ComboBox Name="Occupation" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
                     <Label Content="тыс. рублей" HorizontalAlignment="Left" Margin="90,97,0,0" VerticalAlignment="Top" Grid.Column="1"/>
                 </Grid>
             </TabItem>
@@ -83,14 +83,15 @@
             <TabItem Header="Опыт работы">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="295*"/>
-                        <ColumnDefinition Width="476*"/>
+                        <ColumnDefinition Width="61*"/>
+                        <ColumnDefinition Width="405*"/>
+                        <ColumnDefinition Width="305*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Организация" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxOrganiztion" HorizontalAlignment="Left" Margin="141,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Должность" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxLastPosition" HorizontalAlignment="Left" Margin="141,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <Button Content="Готово" HorizontalAlignment="Left" Margin="370,347,0,0" VerticalAlignment="Top" Height="40" Width="68" Click="Button_Click" Grid.Column="1"/>
+                    <Label Content="Организация" HorizontalAlignment="Left" Margin="37,53,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="82"/>
+                    <TextBox Name="textBoxOrganiztion" HorizontalAlignment="Left" Margin="80,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="18"/>
+                    <Label Content="Должность" HorizontalAlignment="Left" Margin="37,100,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="71"/>
+                    <TextBox Name="textBoxLastPosition" HorizontalAlignment="Left" Margin="80,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="18"/>
+                    <Button Content="Готово" HorizontalAlignment="Left" Margin="153,317,0,0" VerticalAlignment="Top" Height="40" Width="68" Click="Ready_Click" Grid.Column="2"/>
                 </Grid>
             </TabItem>
         </TabControl>
