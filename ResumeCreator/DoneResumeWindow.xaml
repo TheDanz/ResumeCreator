@@ -13,6 +13,7 @@
         <Button Content="Отправить резюме по почте" HorizontalAlignment="Left" Margin="554,193,0,0" VerticalAlignment="Top" Height="142" Click="MailOutput_Click"/>
         <TextBox Name="textBoxUserMail" HorizontalAlignment="Left" Margin="574,383,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Enter your mail:" HorizontalAlignment="Left" Margin="588,352,0,0" VerticalAlignment="Top"/>
+        <WebBrowser Name="wb" Margin="14,19,512,273"/>
 
     </Grid>
 </Window>

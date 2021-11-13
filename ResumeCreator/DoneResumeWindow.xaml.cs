@@ -1,10 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows;
 using Microsoft.Win32;
 using System.Net.Mail;
 using System.Net;
 using System.IO;
+using System.Windows.Controls;
+using AcroPDFLib;
+using System.Diagnostics;
 
 namespace ResumeCreator
 {
@@ -17,8 +19,10 @@ namespace ResumeCreator
 
         private void DisplayOutput_Click(object sender, RoutedEventArgs e)
         {
-
+            string baseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory;
+            wb.Navigate(@"file:\\\" + baseDirectoryPath + "ReadySample1.pdf");
         }
+    
 
         private void PDFOutput_Click(object sender, RoutedEventArgs e)
         {
@@ -50,7 +54,6 @@ namespace ResumeCreator
                 smtp.EnableSsl = true;
                 smtp.Send(m);
                 MessageBox.Show("Message sent");
-                System.Threading.Thread.Sleep(5000);
                 File.Delete(baseDirectoryPath + @"\ReadySample1.pdf");
             }
             catch (Exception ex)

@@ -53,3 +53,4 @@ C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows
 C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\Interop.Office2013CustomActionsLib.dll
 C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll
 C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.csproj.ResolveComReference.cache
+C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\Interop.AcroPDFLib.dll
