@@ -30,13 +30,11 @@ C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\bin\Debug\net5.0-wind
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\bin\Debug\net5.0-windows\ref\ResumeCreator.dll
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\bin\Debug\net5.0-windows\ResumeCreator.pdb
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.csprojAssemblyReference.cache
-C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DoneResume.g.cs
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\InformationWindow.g.cs
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\MainWindow.g.cs
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\App.g.cs
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator_MarkupCompile.cache
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator_MarkupCompile.lref
-C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DoneResume.baml
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\InformationWindow.baml
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\MainWindow.baml
 C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.g.resources
@@ -58,3 +56,11 @@ C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows
 C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DisplayOutputWindow.baml
 C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\MailOutputWindow.g.cs
 C:\Users\Danil\source\repos\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\MailOutputWindow.baml
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\ResumeCreator.csproj.ResolveComReference.cache
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DisplayOutputWindow.g.cs
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DoneResumeWindow.g.cs
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\MailOutputWindow.g.cs
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DisplayOutputWindow.baml
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\DoneResumeWindow.baml
+C:\Users\Tusa\Documents\GitHub\ResumeCreator\ResumeCreator\obj\Debug\net5.0-windows\MailOutputWindow.baml

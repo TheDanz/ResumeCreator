@@ -20,7 +20,7 @@ namespace ResumeCreator
                 { "<teg1>", textBoxSecondName.Text}, //фамилия
                 { "<teg2>", textBoxFirstName.Text}, //имя
                 { "<teg3>", textBoxThirdName.Text}, //отчество
-               // { "<teg4>", informationWindow.}, //дата рождения
+                { "<teg4>", DateOfBirth.Text }, //дата рождения
                 { "<teg5>", Pol.Text}, //пол
                 { "<teg6>", textBoxCity.Text}, //город
                 { "<teg7>", textBoxPosition.Text}, //должность
@@ -39,6 +39,10 @@ namespace ResumeCreator
                 { "<teg20>", textBoxLastPosition.Text}, //должность
                 { "<teg21>", textBoxMail.Text}, //электронная почта
                 { "<teg22>", textBoxPhone.Text}, //телефон
+                { "<teg23>", StartWork.Text}, //начало периода работы
+                { "<teg24>", EndWork.Text}, //окончание периода работы
+                //{ "<teg25>", Achievements.}, //достижения
+
             };
         }
 
