@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResumeCreator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button Content="Создать новое резюме" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Center" Height="159" Width="202" Click="Button_Click"/>
         <Button Content="Загрузить и изменить резюме" HorizontalAlignment="Left" Margin="440,0,0,0" VerticalAlignment="Center" Height="159" Width="208"/>

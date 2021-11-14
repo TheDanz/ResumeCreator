@@ -4,9 +4,6 @@ using Microsoft.Win32;
 using System.Net.Mail;
 using System.Net;
 using System.IO;
-using System.Windows.Controls;
-using AcroPDFLib;
-using System.Diagnostics;
 
 namespace ResumeCreator
 {
@@ -19,11 +16,10 @@ namespace ResumeCreator
 
         private void DisplayOutput_Click(object sender, RoutedEventArgs e)
         {
-            string baseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory;
-            wb.Navigate(@"file:\\\" + baseDirectoryPath + "ReadySample1.pdf");
+            DisplayOutputWindow displayOutputWindow = new DisplayOutputWindow();
+            displayOutputWindow.Show();
         }
     
-
         private void PDFOutput_Click(object sender, RoutedEventArgs e)
         {
             string destFilePath = null;
@@ -34,7 +30,6 @@ namespace ResumeCreator
                 destFilePath = sfd.FileName;
             }
             File.Copy(baseDirectoryPath + @"\ReadySample1.pdf", destFilePath + @".pdf");
-            File.Delete(baseDirectoryPath + @"\ReadySample1.pdf");
         }
 
         private void MailOutput_Click(object sender, RoutedEventArgs e)
@@ -42,19 +37,19 @@ namespace ResumeCreator
             string baseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory;
             try
             {
-                MailAddress from = new MailAddress("resume.creator723@gmail.com", "ResumeCreator");
-                MailAddress to = new MailAddress(this.textBoxUserMail.Text);
-                MailMessage m = new MailMessage(from, to);
-                m.Subject = "ResumeCreator";
-                m.Body = "<h2>Your resume is attached</h2>";
-                m.IsBodyHtml = true;
-                m.Attachments.Add(new Attachment(baseDirectoryPath + @"\ReadySample1.pdf"));
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential("resume.creator723@gmail.com", "ContestOneLove");
-                smtp.EnableSsl = true;
-                smtp.Send(m);
-                MessageBox.Show("Message sent");
-                File.Delete(baseDirectoryPath + @"\ReadySample1.pdf");
+               // MailAddress from = new MailAddress("resume.creator723@gmail.com", "ResumeCreator");
+               //// MailAddress to = new MailAddress(this.textBoxUserMail.Text);
+               //// MailMessage m = new MailMessage(from, to);
+               // m.Subject = "ResumeCreator";
+               // m.Body = "<h2>Your resume is attached</h2>";
+               // m.IsBodyHtml = true;
+               // m.Attachments.Add(new Attachment(baseDirectoryPath + @"\ReadySample1.pdf"));
+               // SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+               // smtp.Credentials = new NetworkCredential("resume.creator723@gmail.com", "ContestOneLove");
+               // smtp.EnableSsl = true;
+               // smtp.Send(m);
+               // MessageBox.Show("Message sent");
+               // File.Delete(baseDirectoryPath + @"\ReadySample1.pdf");
             }
             catch (Exception ex)
             {
