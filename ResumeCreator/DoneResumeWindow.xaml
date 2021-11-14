@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResumeCreator"
         mc:Ignorable="d"
-        Title="DoneResumeWindow" Height="400" Width="800" 
+        Title="ResumeCreator" Height="400" Width="800" 
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Резюме готово" FontFamily="Helvetica" FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" Margin="0,0,0,290"/>
+        <Label Content="Резюме готово" FontFamily="Helvetica" FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" Margin="0,0,0,300"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="DisplayOutput_Click">
                 <StackPanel>
