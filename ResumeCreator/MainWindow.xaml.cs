@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace ResumeCreator
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -17,11 +9,16 @@ namespace ResumeCreator
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CreateNewResume_Click(object sender, RoutedEventArgs e)
         {
             var infoWindow = new InformationWindow();
             infoWindow.Show();
-            this.Close();
+            Close();
+        }
+
+        private void UploadAndChangeResume_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

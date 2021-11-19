@@ -5,11 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResumeCreator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="ResumeCreator" Height="400" Width="800" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Content="Создать новое резюме" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Center" Height="159" Width="202" Click="Button_Click"/>
-        <Button Content="Загрузить и изменить резюме" HorizontalAlignment="Left" Margin="440,0,0,0" VerticalAlignment="Center" Height="159" Width="208"/>
-        <Label Content="Добро пожаловать в ResumeCreator" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top"/>
-
+        <Label Content="Welcome to ResumeCreator" FontFamily="Helvetica" FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" Margin="0,0,0,300"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="CreateNewResume_Click">
+                <StackPanel>
+                    <TextBlock Text="Создать новое" HorizontalAlignment="Center"/>
+                    <TextBlock Text="резюме" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="UploadAndChangeResume_Click">
+                <StackPanel>
+                    <TextBlock Text="Загрузить и" HorizontalAlignment="Center"/>
+                    <TextBlock Text="изменить резюме" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
