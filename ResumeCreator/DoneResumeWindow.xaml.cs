@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows;
 using Microsoft.Win32;
-using System.Net.Mail;
-using System.Net;
 using System.IO;
 
 namespace ResumeCreator
@@ -24,13 +22,12 @@ namespace ResumeCreator
         private void PDFOutput_Click(object sender, RoutedEventArgs e)
         {
             string destFilePath = null;
-            string baseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory;
             SaveFileDialog sfd = new SaveFileDialog();
             if (sfd.ShowDialog() == true)
             {
                 destFilePath = sfd.FileName;
             }
-            File.Copy(baseDirectoryPath + @"\ReadySample1.pdf", destFilePath + @".pdf");
+            File.Copy("ReadySample.pdf", destFilePath + @".pdf");
         }
 
         private void MailOutput_Click(object sender, RoutedEventArgs e)

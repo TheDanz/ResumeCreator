@@ -9,7 +9,7 @@ namespace ResumeCreator
         {
             InitializeComponent();
             string baseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory;
-            webBrowser.Navigate(@"file:\\\" + baseDirectoryPath + "ReadySample1.pdf");
+            webBrowser.Navigate(@"file:\\\" + baseDirectoryPath + "ReadySample.pdf");
         }
     }
 }

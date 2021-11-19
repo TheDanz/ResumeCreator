@@ -11,8 +11,8 @@ namespace ResumeCreator
 
         private void CreateNewResume_Click(object sender, RoutedEventArgs e)
         {
-            var infoWindow = new InformationWindow();
-            infoWindow.Show();
+            var informationWindow = new InformationWindow();
+            informationWindow.Show();
             Close();
         }
 
