@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using Microsoft.Win32;
 using System.IO;
 
@@ -35,6 +34,11 @@ namespace ResumeCreator
             MailOutputWindow mailOutputWindow = new MailOutputWindow();
             mailOutputWindow.Owner = this;
             mailOutputWindow.ShowDialog();
+        }
+
+        private void DoneResumeWindow_Closed(object sender, System.EventArgs e)
+        {
+            File.Delete("ReadySample.pdf");
         }
     }
 }

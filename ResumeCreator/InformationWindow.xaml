@@ -12,64 +12,64 @@
         <TabControl>
             <TabItem Header="Общая информация">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox Name="textBoxPosition" HorizontalAlignment="Left" Margin="123,56,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Должность" HorizontalAlignment="Left" Margin="37,52,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Желаемая зарплата" HorizontalAlignment="Left" Margin="37,97,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="37,145,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxSalary" HorizontalAlignment="Left" Margin="170,101,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="170,149,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="152"/>
-                    <CheckBox Name ="checkBoxReadyToWorkOut" Content="Да/Нет" HorizontalAlignment="Left" Margin="231,247,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="37,241,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Телефон" HorizontalAlignment="Left" Margin="37,197,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxPhone" HorizontalAlignment="Left" Margin="126,201,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Занятость" HorizontalAlignment="Left" Margin="37,294,0,0" VerticalAlignment="Top"/>
-                    <ComboBox Name="Occupation" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="120">
+                    <TextBox Name="textBoxPosition" HorizontalAlignment="Left" Margin="230,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <Label Content="Должность" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <Label Content="Желаемая зарплата" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <TextBox Name="textBoxSalary" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="231,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <CheckBox Name ="checkBoxReadyToWorkOut" Content="Да/Нет" HorizontalAlignment="Left" Margin="230,246,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <Label Content="Телефон" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <TextBox Name="textBoxPhone" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <Label Content="Занятость" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
+                    <ComboBox Name="Occupation" HorizontalAlignment="Left" Margin="230,290,0,0" VerticalAlignment="Top" Width="180" Height="26">
                         <TextBlock>Полный рабочий день</TextBlock>
                         <TextBlock>Неполный рабочий день</TextBlock>
                     </ComboBox>
-                    <Label Content="тыс. рублей" HorizontalAlignment="Left" Margin="295,97,0,0" VerticalAlignment="Top"/>
+                    <Label Content="₽" HorizontalAlignment="Left" Margin="415,90,0,0" VerticalAlignment="Top" Height="26" Width="26" FontSize="16" FontWeight="Normal"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Личная информация">
                 <Grid Background="#FFE5E5E5">
-                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="37,48,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Имя" HorizontalAlignment="Left" Margin="265,49,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Отчество" HorizontalAlignment="Left" Margin="476,48,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxSecondName" HorizontalAlignment="Left" Margin="108,53,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxFirstName" HorizontalAlignment="Left" Margin="315,53,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxThirdName" HorizontalAlignment="Left" Margin="562,53,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Город проживания" HorizontalAlignment="Left" Margin="37,89,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxCity" HorizontalAlignment="Left" Margin="168,93,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="37,131,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Name="checkBoxReadyToMove" Content="Да/Нет"  HorizontalAlignment="Left" Margin="190,137,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="37,171,0,0" VerticalAlignment="Top"/>
-                    <DatePicker Name="datePickerDateOfBirth" HorizontalAlignment="Left" Margin="149,171,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDateFormat="Short"/>
-                    <Label Content="Пол" HorizontalAlignment="Left" Margin="37,205,0,0" VerticalAlignment="Top"/>
-                    <ComboBox Name="comboBoxGender" HorizontalAlignment="Left" Margin="118,209,0,0" VerticalAlignment="Top" Width="100">
+                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <Label Content="Имя" HorizontalAlignment="Left" Margin="400,40,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
+                    <Label Content="Отчество (при наличии)" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="textBoxSecondName" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <TextBox Name="textBoxFirstName" HorizontalAlignment="Left" Margin="450,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <TextBox Name="textBoxThirdName" HorizontalAlignment="Left" Margin="200,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <Label Content="Город" HorizontalAlignment="Left" Margin="400,140,0,0" VerticalAlignment="Top" Height="26"/>
+                    <TextBox Name="textBoxCity" HorizontalAlignment="Left" Margin="450,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <CheckBox Name="checkBoxReadyToMove" Content="Да/Нет"  HorizontalAlignment="Left" Margin="200,246,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <DatePicker Name="datePickerDateOfBirth" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDateFormat="Short" Width="140"/>
+                    <Label Content="Пол" HorizontalAlignment="Left" Margin="400,90,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
+                    <ComboBox Name="comboBoxGender" HorizontalAlignment="Left" Margin="450,90,0,0" VerticalAlignment="Top" Width="140" Height="26">
                         <TextBlock>Мужской</TextBlock>
                         <TextBlock>Женский</TextBlock>
                     </ComboBox>
-                    <Label Content="Семейное положение" HorizontalAlignment="Left" Margin="37,246,0,0" VerticalAlignment="Top"/>
-                    <ComboBox Name="comboBoxMarry" HorizontalAlignment="Left" Margin="168,248,0,0" VerticalAlignment="Top" Width="120">
+                    <Label Content="Семейное положение" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <ComboBox Name="comboBoxMarry" HorizontalAlignment="Left" Margin="200,140,0,0" VerticalAlignment="Top" Width="140" Height="26">
                         <TextBlock>Не замужем/Не женат</TextBlock>
                         <TextBlock>Замужем/Женат</TextBlock>
                     </ComboBox>
-                    <Label Content="Есть дети" HorizontalAlignment="Left" Margin="36,286,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Name="checkBoxChildren" Content="Да/Нет" HorizontalAlignment="Left" Margin="110,292,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Дети" HorizontalAlignment="Left" Margin="400,190,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
+                    <CheckBox Name="checkBoxChildren" Content="Есть/Нет" HorizontalAlignment="Left" Margin="450,196,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Образование">
                 <Grid Background="#FFE5E5E5">
-                    <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="36,54,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Год окончания" HorizontalAlignment="Left" Margin="36,94,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="36,134,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="36,179,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="36,220,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxUniversity" HorizontalAlignment="Left" Margin="180,58,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxУearOfGraduation" HorizontalAlignment="Left" Margin="180,98,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxFaculty" HorizontalAlignment="Left" Margin="180,138,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxSpeciality" HorizontalAlignment="Left" Margin="180,183,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox Name ="comboBoxFormOfEducation" HorizontalAlignment="Left" Margin="180,222,0,0" VerticalAlignment="Top" Width="120">
+                    <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <Label Content="Год окончания" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <TextBox Name="textBoxUniversity" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <TextBox Name="textBoxУearOfGraduation" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="200,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <TextBox Name="textBoxFaculty" HorizontalAlignment="Left" Margin="200,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <TextBox Name="textBoxSpeciality" HorizontalAlignment="Left" Margin="200,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <ComboBox Name ="comboBoxFormOfEducation" HorizontalAlignment="Left" Margin="200,240,0,0" VerticalAlignment="Top" Width="140" Height="26">
                         <TextBlock>Очно-заочная</TextBlock>
                         <TextBlock>Заочная</TextBlock>
                         <TextBlock>Очная</TextBlock>
@@ -78,34 +78,35 @@
             </TabItem>
             <TabItem Header="Опыт работы">
                 <Grid Background="#FFE5E5E5">
-                    <Label Name="labelOrganization1" Content="Организация" HorizontalAlignment="Left" Margin="12,26,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-                    <Label Name="labelPosition1" Content="Должность" HorizontalAlignment="Left" Margin="12,57,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-                    <Label Name="labelWorkPerion1" Content="Период работы" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
-                    <DatePicker Name="datePickerStartWork1" HorizontalAlignment="Left" Margin="114,90,0,0" VerticalAlignment="Top" Width="120"/>
-                    <DatePicker Name="datePickerEndWork1" HorizontalAlignment="Left" Margin="114,119,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxOrganiztion1" HorizontalAlignment="Left" Margin="114,34,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="18"/>
-                    <TextBox Name="textBoxLastPosition1" HorizontalAlignment="Left" Margin="114,65,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="18"/>
+                    <Label Name="labelOrganization1" Content="Организация" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <Label Name="labelPosition1" Content="Должность" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <Label Name="labelWorkPerion1" Content="Период работы" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+                    <DatePicker Name="datePickerStartWork1" HorizontalAlignment="Left" Margin="115,90,0,0" VerticalAlignment="Top" Width="110"/>
+                    <DatePicker Name="datePickerEndWork1" HorizontalAlignment="Left" Margin="115,120,0,0" VerticalAlignment="Top" Width="110"/>
+                    <TextBox Name="textBoxOrganiztion1" HorizontalAlignment="Left" Margin="115,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
+                    <TextBox Name="textBoxLastPosition1" HorizontalAlignment="Left" Margin="115,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
 
-                    <Label Name="labelOrganization2" Content="Организация" Visibility="Hidden" HorizontalAlignment="Left" Margin="252,26,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-                    <Label Name="labelPosition2" Content="Должность" Visibility="Hidden" HorizontalAlignment="Left" Margin="252,57,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-                    <Label Name="labelWorkPerion2" Content="Период работы" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,101,0,0" VerticalAlignment="Top"/>
-                    <DatePicker Name="datePickerStartWork2" Visibility="Hidden" HorizontalAlignment="Left" Margin="354,90,0,0" VerticalAlignment="Top" Width="120"/>
-                    <DatePicker Name="datePickerEndWork2" Visibility="Hidden" HorizontalAlignment="Left" Margin="354,119,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxOrganiztion2" Visibility="Hidden" HorizontalAlignment="Left" Margin="354,34,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="18"/>
-                    <TextBox Name="textBoxLastPosition2" Visibility="Hidden" HorizontalAlignment="Left" Margin="354,65,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="18"/>
+                    <Label Name="labelOrganization2" Content="Организация" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <Label Name="labelPosition2" Content="Должность" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <Label Name="labelWorkPerion2" Content="Период работы" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,100,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <DatePicker Name="datePickerStartWork2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,90,0,0" VerticalAlignment="Top" Width="110"/>
+                    <DatePicker Name="datePickerEndWork2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,120,0,0" VerticalAlignment="Top" Width="110"/>
+                    <TextBox Name="textBoxOrganiztion2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
+                    <TextBox Name="textBoxLastPosition2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
 
-                    <Label Name="labelOrganization3" Content="Организация" Visibility="Hidden" HorizontalAlignment="Left" Margin="492,26,0,0" VerticalAlignment="Top" Height="26" Width="82"/>
-                    <Label Name="labelPosition3" Content="Должность" Visibility="Hidden" HorizontalAlignment="Left" Margin="492,57,0,0" VerticalAlignment="Top" Height="26" Width="77"/>
-                    <Label Name="labelWorkPerion3" Content="Период работы" Visibility="Hidden" HorizontalAlignment="Left" Margin="490,101,0,0" VerticalAlignment="Top"/>
-                    <DatePicker Name="datePickerStartWork3" Visibility="Hidden" HorizontalAlignment="Left" Margin="594,90,0,0" VerticalAlignment="Top" Width="120"/>
-                    <DatePicker Name="datePickerEndWork3" Visibility="Hidden" HorizontalAlignment="Left" Margin="594,119,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Name="textBoxOrganiztion3" Visibility="Hidden" HorizontalAlignment="Left" Margin="594,34,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="18"/>
-                    <TextBox Name="textBoxLastPosition3" Visibility="Hidden" HorizontalAlignment="Left" Margin="594,65,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120" Height="18"/>
+                    <Label Name="labelOrganization3" Content="Организация" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <Label Name="labelPosition3" Content="Должность" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <Label Name="labelWorkPerion3" Content="Период работы" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,100,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
+                    <DatePicker Name="datePickerStartWork3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,90,0,0" VerticalAlignment="Top" Width="110"/>
+                    <DatePicker Name="datePickerEndWork3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,120,0,0" VerticalAlignment="Top" Width="110"/>
+                    <TextBox Name="textBoxOrganiztion3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
+                    <TextBox Name="textBoxLastPosition3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
 
-                    <RichTextBox Name="richTextBoxAchievements" Margin="12,183,20,71"/>
-                    <Label Content="Достижения" HorizontalAlignment="Left" Margin="12,152,0,0" VerticalAlignment="Top" Width="82"/>
-                    <Button Content="Готово" HorizontalAlignment="Left" Margin="708,298,0,0" VerticalAlignment="Top" Height="31" Width="66" Click="Ready_Click"/>
-                    <Button Content="Добавить" HorizontalAlignment="Left" Margin="12,298,0,0" VerticalAlignment="Top" Height="31" Width="66" Click="Add_Click"/>
+                    <RichTextBox Name="richTextBoxAchievements" Margin="20,180,20,70"/>
+                    <Label Content="Достижения" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
+                    <Button Content="Готово" HorizontalAlignment="Left" Margin="704,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Ready_Click"/>
+                    <Button Content="Добавить" HorizontalAlignment="Left" Margin="20,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Add_Click"/>
+                    <Button Content="Удалить" HorizontalAlignment="Left" Margin="100,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Delete_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

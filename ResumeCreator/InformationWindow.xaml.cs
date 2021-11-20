@@ -81,6 +81,7 @@ namespace ResumeCreator
                 pdfHelper.ConvertToPDF();
                 File.Delete(baseDirectoryPath + @"\ReadySample.docx");
                 DoneResumeWindow doneResumeWindow = new DoneResumeWindow();
+                Close();
                 doneResumeWindow.Show();
             } 
             catch (Exception ex)
@@ -113,6 +114,44 @@ namespace ResumeCreator
                 textBoxLastPosition3.Visibility = Visibility.Visible;
                 isButtonAddPushedTwice = true;
             }
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (isButtonAddPushedTwice)
+            {
+                labelOrganization3.Visibility = Visibility.Hidden;
+                labelPosition3.Visibility = Visibility.Hidden;
+                labelWorkPerion3.Visibility = Visibility.Hidden;
+                datePickerEndWork3.Visibility = Visibility.Hidden;
+                datePickerStartWork3.Visibility = Visibility.Hidden;
+                textBoxOrganiztion3.Visibility = Visibility.Hidden;
+                textBoxLastPosition3.Visibility = Visibility.Hidden;
+                datePickerEndWork3.Text = null;
+                datePickerStartWork3.Text = null;
+                textBoxOrganiztion3.Text = null;
+                textBoxLastPosition3.Text = null;
+                isButtonAddPushedTwice = false;
+            } else if (isButtonAddPushedOnce)
+            {
+                labelOrganization2.Visibility = Visibility.Hidden;
+                labelPosition2.Visibility = Visibility.Hidden;
+                labelWorkPerion2.Visibility = Visibility.Hidden;
+                datePickerEndWork2.Visibility = Visibility.Hidden;
+                datePickerStartWork2.Visibility = Visibility.Hidden;
+                textBoxOrganiztion2.Visibility = Visibility.Hidden;
+                textBoxLastPosition2.Visibility = Visibility.Hidden;
+                datePickerEndWork2.Text = null;
+                datePickerStartWork2.Text = null;
+                textBoxOrganiztion2.Text = null;
+                textBoxLastPosition2.Text = null;
+                isButtonAddPushedOnce = false;
+            }
+        }
+
+        private void textBoxOnlyNumbers(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.Text, 0);
         }
     }
 }
