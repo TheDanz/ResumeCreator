@@ -74,6 +74,47 @@ namespace ResumeCreator
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(textBoxSecondName.Text) ||
+                string.IsNullOrWhiteSpace(textBoxFirstName.Text) ||
+                string.IsNullOrWhiteSpace(textBoxCity.Text) ||
+                string.IsNullOrWhiteSpace(textBoxPosition.Text) ||
+                string.IsNullOrWhiteSpace(textBoxSalary.Text) ||
+                string.IsNullOrWhiteSpace(textBoxUniversity.Text) ||
+                string.IsNullOrWhiteSpace(textBoxУearOfGraduation.Text) ||
+                string.IsNullOrWhiteSpace(textBoxFaculty.Text) ||
+                string.IsNullOrWhiteSpace(textBoxSpeciality.Text) ||
+                string.IsNullOrWhiteSpace(textBoxMail.Text) ||
+                string.IsNullOrWhiteSpace(textBoxPhone.Text) ||
+                string.IsNullOrWhiteSpace(textBoxOrganiztion1.Text) ||
+                string.IsNullOrWhiteSpace(textBoxLastPosition1.Text) ||
+                string.IsNullOrWhiteSpace(datePickerDateOfBirth.Text) ||
+                string.IsNullOrWhiteSpace(datePickerStartWork1.Text) ||
+                string.IsNullOrWhiteSpace(datePickerEndWork1.Text) ||
+                string.IsNullOrWhiteSpace(comboBoxGender.Text) ||
+                string.IsNullOrWhiteSpace(comboBoxOccupation.Text) ||
+                string.IsNullOrWhiteSpace(comboBoxMarry.Text) ||
+                string.IsNullOrWhiteSpace(comboBoxFormOfEducation.Text)
+                )
+                {
+                    throw new ArgumentException();
+                }
+                if (isButtonAddPushedOnce && (string.IsNullOrWhiteSpace(textBoxOrganiztion2.Text) ||
+                    string.IsNullOrWhiteSpace(textBoxLastPosition2.Text) ||
+                    string.IsNullOrWhiteSpace(datePickerEndWork2.Text) ||
+                    string.IsNullOrWhiteSpace(datePickerStartWork2.Text)
+                    ))
+                {
+                    throw new ArgumentException();
+                }
+                if (isButtonAddPushedTwice && (string.IsNullOrWhiteSpace(textBoxOrganiztion3.Text) ||
+                   string.IsNullOrWhiteSpace(textBoxLastPosition3.Text) ||
+                   string.IsNullOrWhiteSpace(datePickerEndWork3.Text) ||
+                   string.IsNullOrWhiteSpace(datePickerStartWork3.Text)
+                   ))
+                {
+                    throw new ArgumentException();
+                }
+
                 FillInTegs();
                 string baseDirectoryPath = AppDomain.CurrentDomain.BaseDirectory;
                 WordHelper wordHelper = new WordHelper("Sample.docx");
@@ -81,24 +122,28 @@ namespace ResumeCreator
                 PDFHelper pdfHelper = new PDFHelper();
                 pdfHelper.ConvertToPDF();
                 File.Delete(baseDirectoryPath + @"\ReadySample.docx");
-                DoneResumeWindow doneResumeWindow = new DoneResumeWindow();
-                Close();
-                doneResumeWindow.Show();
-                using (StreamWriter sw = new StreamWriter("output.txt"))
+                using (StreamWriter sw = new StreamWriter("EditableResume.resumecreator"))
                 {
                     foreach (var teg in tegs)
                     {
                         sw.WriteLine(teg.Value);
                     }
                 }
-            } 
+                DoneResumeWindow doneResumeWindow = new DoneResumeWindow();
+                Close();
+                doneResumeWindow.Show();
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Заполните все пустые поля!", "ResumeCreator", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ResumeCreator", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void Add_Click(object sender, RoutedEventArgs e)
+        public void Add_Click(object sender, RoutedEventArgs e)
         {
             if (isButtonAddPushedOnce == false)
             {
@@ -161,7 +206,5 @@ namespace ResumeCreator
         {
             e.Handled = !char.IsDigit(e.Text, 0);
         }
-
-
     }
 }

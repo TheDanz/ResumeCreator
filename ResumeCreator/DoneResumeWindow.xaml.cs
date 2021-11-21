@@ -42,7 +42,14 @@ namespace ResumeCreator
         }
         private void SaveFileForFurtherModification_Click(object sender, RoutedEventArgs e)
         {
-
+            string destFilePath = null;
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == true)
+            {
+                destFilePath = sfd.FileName;
+            }
+            File.Copy("EditableResume.resumecreator", destFilePath + @".resumecreator");
+            MessageBox.Show("Файл успешно сохранен!", "ResumeCreator", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

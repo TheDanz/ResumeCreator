@@ -96,17 +96,25 @@ namespace ResumeCreator
                         else
                         {
                             informationWindow.richTextBoxAchievements.AppendText(str);
-
-
                             while ((str = sr.ReadLine()) != null)
                             {
                                 informationWindow.richTextBoxAchievements.AppendText("\n");
-
                                 informationWindow.richTextBoxAchievements.AppendText(str);
                             }
                         }
                     }
                 }
+
+                if (!string.IsNullOrWhiteSpace(textBoxes["<teg25>"].Text))
+                {
+                    informationWindow.Add_Click(sender, e);
+                }
+
+                if (!string.IsNullOrWhiteSpace(textBoxes["<teg29>"].Text))
+                {
+                    informationWindow.Add_Click(sender, e);
+                }
+
                 informationWindow.Show();
                 Close();
             }
