@@ -40,5 +40,9 @@ namespace ResumeCreator
         {
             File.Delete("ReadySample.pdf");
         }
+        private void SaveFileForFurtherModification_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

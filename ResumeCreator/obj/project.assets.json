@@ -8,19 +8,23 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Danil\\.nuget\\packages\\": {}
+    "C:\\Users\\Tusa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danil\\source\\repos\\ResumeCreator\\ResumeCreator\\ResumeCreator.csproj",
+      "projectUniqueName": "C:\\Users\\Tusa\\Documents\\GitHub\\ResumeCreator\\ResumeCreator\\ResumeCreator.csproj",
       "projectName": "ResumeCreator",
-      "projectPath": "C:\\Users\\Danil\\source\\repos\\ResumeCreator\\ResumeCreator\\ResumeCreator.csproj",
-      "packagesPath": "C:\\Users\\Danil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danil\\source\\repos\\ResumeCreator\\ResumeCreator\\obj\\",
+      "projectPath": "C:\\Users\\Tusa\\Documents\\GitHub\\ResumeCreator\\ResumeCreator\\ResumeCreator.csproj",
+      "packagesPath": "C:\\Users\\Tusa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tusa\\Documents\\GitHub\\ResumeCreator\\ResumeCreator\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tusa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +67,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

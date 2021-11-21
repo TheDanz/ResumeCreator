@@ -30,6 +30,14 @@
                     <TextBlock Text="по почте" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="SaveFileForFurtherModification_Click">
+                <StackPanel>
+                    <TextBlock Text="Сохранить" HorizontalAlignment="Center"/>
+                    <TextBlock Text="файл для" HorizontalAlignment="Center"/>
+                    <TextBlock Text="дальшнейшего" HorizontalAlignment="Center"/>
+                    <TextBlock Text="изменения" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Documents;
+using System.Windows.Input;
 
 namespace ResumeCreator
 {
     public partial class InformationWindow : Window
     {
         private Dictionary<string, string> tegs;
-        private bool isButtonAddPushedOnce = false;
-        private bool isButtonAddPushedTwice = false;
+        public bool isButtonAddPushedOnce = false;
+        public bool isButtonAddPushedTwice = false;
 
         public InformationWindow()
         {
@@ -32,7 +33,7 @@ namespace ResumeCreator
                 { "<teg6>", textBoxCity.Text}, // город
                 { "<teg7>", textBoxPosition.Text}, // должность
                 { "<teg8>", textBoxSalary.Text}, // зарплата
-                { "<teg9>", Occupation.Text}, // занятость
+                { "<teg9>", comboBoxOccupation.Text}, // занятость
                 { "<teg10>", new string ((bool)checkBoxReadyToMove.IsChecked ? "Да" : "Нет") }, // переезд
                 { "<teg11>", new string ((bool)checkBoxReadyToWorkOut.IsChecked ? "Да" : "Нет")}, // командировки
                 { "<teg12>", comboBoxMarry.Text}, // семейное положение
@@ -83,6 +84,13 @@ namespace ResumeCreator
                 DoneResumeWindow doneResumeWindow = new DoneResumeWindow();
                 Close();
                 doneResumeWindow.Show();
+                using (StreamWriter sw = new StreamWriter("output.txt"))
+                {
+                    foreach (var teg in tegs)
+                    {
+                        sw.WriteLine(teg.Value);
+                    }
+                }
             } 
             catch (Exception ex)
             {
@@ -149,9 +157,11 @@ namespace ResumeCreator
             }
         }
 
-        private void textBoxOnlyNumbers(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        private void textBoxOnlyNumbers(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !char.IsDigit(e.Text, 0);
         }
+
+
     }
 }
