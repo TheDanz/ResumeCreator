@@ -10,27 +10,32 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl>
-            <TabItem Header="Общая информация">
+            <TabItem Header="Общая информация" FontWeight="Normal">
                 <Grid Background="#FFE5E5E5">
-                    <TextBox Name="textBoxPosition" HorizontalAlignment="Left" Margin="230,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
-                    <Label Content="Должность" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="180" Height="26"/>
-                    <Label Content="Желаемая зарплата" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
-                    <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
-                    <TextBox Name="textBoxSalary" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
-                    <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="231,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="146*"/>
+                        <ColumnDefinition Width="251*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="textBoxPosition" HorizontalAlignment="Left" Margin="230,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
+                    <Label Content="Должность" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="180" Height="26" FontFamily="Segoe UI" FontWeight="Normal" FontStyle="Normal" FontStretch="Normal"/>
+                    <Label Content="Желаемая зарплата" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
+                    <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
+                    <TextBox Name="textBoxSalary" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
+                    <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="231,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
                     <CheckBox Name ="checkBoxReadyToWorkOut" Content="Да/Нет" HorizontalAlignment="Left" Margin="230,246,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Width="180" Height="26"/>
-                    <Label Content="Телефон" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
-                    <TextBox Name="textBoxPhone" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26"/>
-                    <Label Content="Занятость" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top" Height="26" Width="180"/>
-                    <ComboBox Name="comboBoxOccupation" HorizontalAlignment="Left" Margin="230,290,0,0" VerticalAlignment="Top" Width="180" Height="26">
+                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Width="180" Height="26" FontWeight="Normal"/>
+                    <Label Content="Телефон" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
+                    <TextBox Name="textBoxPhone" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
+                    <Label Content="Занятость" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
+                    <ComboBox Name="comboBoxOccupation" HorizontalAlignment="Left" Margin="230,290,0,0" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2">
                         <TextBlock>Полный рабочий день</TextBlock>
                         <TextBlock>Неполный рабочий день</TextBlock>
                     </ComboBox>
-                    <Label Content="₽" HorizontalAlignment="Left" Margin="415,90,0,0" VerticalAlignment="Top" Height="26" Width="26" FontSize="16" FontWeight="Normal"/>
+                    <Label Content="₽" HorizontalAlignment="Left" Margin="123,90,0,0" VerticalAlignment="Top" Height="26" Width="26" FontSize="16" FontWeight="Normal" Grid.Column="1"/>
+                    <Image Source="resources\resumeImage.png"  HorizontalAlignment="Left" Height="319" Margin="179,0,0,0" VerticalAlignment="Center" Width="317" Stretch="Fill" StretchDirection="Both" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Личная информация">
+            <TabItem Header="Личная информация" FontWeight="Normal">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Фамилия" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
                     <Label Content="Имя" HorizontalAlignment="Left" Margin="400,40,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
@@ -58,7 +63,7 @@
                     <CheckBox Name="checkBoxChildren" Content="Есть/Нет" HorizontalAlignment="Left" Margin="450,196,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Образование">
+            <TabItem Header="Образование" FontWeight="Normal">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
                     <Label Content="Год окончания" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
@@ -74,9 +79,10 @@
                         <TextBlock>Заочная</TextBlock>
                         <TextBlock>Очная</TextBlock>
                     </ComboBox>
+                    <Image Source="resources\resumeImage2.png" HorizontalAlignment="Left" Height="239" Margin="417,40,0,0" VerticalAlignment="Top" Width="347"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Опыт работы">
+            <TabItem Header="Опыт работы" FontWeight="Normal">
                 <Grid Background="#FFE5E5E5">
                     <Label Name="labelOrganization1" Content="Организация" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
                     <Label Name="labelPosition1" Content="Должность" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>

@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\resumeImage.png" />
+    <None Remove="resources\resumeImage2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <COMReference Include="Office2013CustomActionsLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -35,6 +40,11 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\resumeImage.png" />
+    <Resource Include="resources\resumeImage2.png" />
   </ItemGroup>
 
   <ItemGroup>
