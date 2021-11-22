@@ -26,7 +26,8 @@ namespace ResumeCreator
             {
                 destFilePath = sfd.FileName;
             }
-            File.Copy("ReadySample.pdf", destFilePath + @".pdf");
+            if (!string.IsNullOrEmpty(destFilePath))
+                File.Copy("ReadySample.pdf", destFilePath + @".pdf");
         }
 
         private void MailOutput_Click(object sender, RoutedEventArgs e)
@@ -36,10 +37,6 @@ namespace ResumeCreator
             mailOutputWindow.ShowDialog();
         }
 
-        private void DoneResumeWindow_Closed(object sender, System.EventArgs e)
-        {
-            File.Delete("ReadySample.pdf");
-        }
         private void SaveFileForFurtherModification_Click(object sender, RoutedEventArgs e)
         {
             string destFilePath = null;
@@ -48,8 +45,14 @@ namespace ResumeCreator
             {
                 destFilePath = sfd.FileName;
             }
-            File.Copy("EditableResume.resumecreator", destFilePath + @".resumecreator");
-            MessageBox.Show("Файл успешно сохранен!", "ResumeCreator", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (!string.IsNullOrEmpty(destFilePath))
+                File.Copy("EditableResume.resumecreator", destFilePath + @".resumecreator");
+        }
+
+        private void DoneResumeWindow_Closed(object sender, System.EventArgs e)
+        {
+            File.Delete("ReadySample.pdf");
+            File.Delete("EditableResume.resumecreator");
         }
     }
 }

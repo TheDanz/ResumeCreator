@@ -5,8 +5,6 @@ using System.Windows;
 using Microsoft.Win32;
 using System.Windows.Controls;
 using System.Collections.Generic;
-using System.Windows.Documents;
-using System.Text.RegularExpressions;
 
 namespace ResumeCreator
 {
@@ -81,6 +79,10 @@ namespace ResumeCreator
                     for (int i = 1; i <= 33; i++)
                     {
                         str = sr.ReadLine();
+                        if (str == "Замужем" || str == "Женат")
+                            str = "Замужем/Женат";
+                        if (str == "Не замужем" || str == "Не женат")
+                            str = "Не замужем/Не женат";
                         if (textBoxes.Keys.Contains("<teg" + i + ">"))
                             textBoxes["<teg" + i + ">"].Text = str;
                         else if (comboBoxes.Keys.Contains("<teg" + i + ">"))
