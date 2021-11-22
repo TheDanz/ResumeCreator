@@ -6,6 +6,7 @@ using Microsoft.Win32;
 using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Windows.Documents;
+using System.Text.RegularExpressions;
 
 namespace ResumeCreator
 {
@@ -95,12 +96,8 @@ namespace ResumeCreator
                             datePickers["<teg" + i + ">"].Text = str;
                         else
                         {
+                            str = str.Replace("$", "\n");
                             informationWindow.richTextBoxAchievements.AppendText(str);
-                            while ((str = sr.ReadLine()) != null)
-                            {
-                                informationWindow.richTextBoxAchievements.AppendText("\n");
-                                informationWindow.richTextBoxAchievements.AppendText(str);
-                            }
                         }
                     }
                 }

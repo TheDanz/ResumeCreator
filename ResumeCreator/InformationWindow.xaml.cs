@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -21,8 +22,30 @@ namespace ResumeCreator
         public void FillInTegs()
         {
             string richTextBoxInfo = new TextRange(richTextBoxAchievements.Document.ContentStart, richTextBoxAchievements.Document.ContentEnd).Text;
+            richTextBoxInfo = Regex.Replace(richTextBoxInfo, @"\r\n?|\n", "$!");
             bool isRichTextBoxInfoEmpry = string.IsNullOrWhiteSpace(richTextBoxInfo);
-
+            if (comboBoxGender.Text == "Мужской")
+            {
+                if (comboBoxMarry.Text == "Не замужем/Не женат")
+                {
+                    comboBoxMarry.Text = "Не женат";
+                }
+                else
+                {
+                    comboBoxMarry.Text = "Женат";
+                }
+            }
+            else
+            {
+                if (comboBoxMarry.Text == "Не замужем/Не женат")
+                {
+                    comboBoxMarry.Text = "Не замужем";
+                }
+                else
+                {
+                    comboBoxMarry.Text = "Замужем";
+                }
+            }
             tegs = new Dictionary<string, string>
             {
                 { "<teg1>", textBoxSecondName.Text}, // фамилия
@@ -124,9 +147,12 @@ namespace ResumeCreator
                 File.Delete(baseDirectoryPath + @"\ReadySample.docx");
                 using (StreamWriter sw = new StreamWriter("EditableResume.resumecreator"))
                 {
+                    int i = 0;
                     foreach (var teg in tegs)
                     {
-                        sw.WriteLine(teg.Value);
+                        if (i < 33)
+                            sw.WriteLine(teg.Value);
+                        i++;
                     }
                 }
                 DoneResumeWindow doneResumeWindow = new DoneResumeWindow();
