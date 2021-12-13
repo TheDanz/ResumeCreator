@@ -23,6 +23,9 @@ namespace ResumeCreator
         {
             try
             {
+               
+
+               
                 if (string.IsNullOrWhiteSpace(textBoxSecondName.Text) ||
                 string.IsNullOrWhiteSpace(textBoxFirstName.Text) ||
                 string.IsNullOrWhiteSpace(textBoxCity.Text) ||
@@ -47,6 +50,19 @@ namespace ResumeCreator
                 {
                     throw new ArgumentException();
                 }
+
+                var addr = new System.Net.Mail.MailAddress(textBoxMail.Text);
+                if (!(addr.Address == textBoxMail.Text))
+                {
+                    throw new Exception();
+                }
+                var date1 = new DateTime(year: 2007, month: 1, day: 1);
+                var date2 = new DateTime(year: 1921, month: 1, day: 1);
+                if ((datePickerDateOfBirth.SelectedDate > date1) || (datePickerDateOfBirth.SelectedDate < date2))
+                {
+                    throw new Exception("Неккоректный возраст");
+                }
+
                 if (isButtonAddPushedOnce && (string.IsNullOrWhiteSpace(textBoxOrganiztion2.Text) ||
                     string.IsNullOrWhiteSpace(textBoxLastPosition2.Text) ||
                     string.IsNullOrWhiteSpace(datePickerEndWork2.Text) ||
@@ -155,10 +171,12 @@ namespace ResumeCreator
                 Close();
                 doneResumeWindow.Show();
             }
+          
             catch (ArgumentException)
             {
                 MessageBox.Show("Заполните все пустые поля!", "ResumeCreator", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ResumeCreator", MessageBoxButton.OK, MessageBoxImage.Error);
