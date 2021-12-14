@@ -28,7 +28,7 @@
                         <TextBlock>Полный рабочий день</TextBlock>
                         <TextBlock>Неполный рабочий день</TextBlock>
                     </ComboBox>
-                    <Label Content="₽" HorizontalAlignment="Left" Margin="123,90,0,0" VerticalAlignment="Top" Height="26" Width="26" FontSize="16" FontWeight="Normal" Grid.Column="1"/>
+                    <Label Content="₽" HorizontalAlignment="Left" Margin="415,90,0,0" VerticalAlignment="Top" Height="26" Width="26" FontSize="16" FontWeight="Normal"/>
                     <Image Source="resources\resumeImage.png"  HorizontalAlignment="Left" Height="319" Margin="433,0,0,0" VerticalAlignment="Center" Width="361" Stretch="Fill" StretchDirection="Both"/>
                 </Grid>
             </TabItem>

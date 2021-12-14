@@ -37,10 +37,10 @@ namespace ResumeCreator
                 string.IsNullOrWhiteSpace(textBoxSpeciality.Text) ||
                 string.IsNullOrWhiteSpace(textBoxMail.Text) ||
                 string.IsNullOrWhiteSpace(textBoxPhone.Text) ||
-                string.IsNullOrWhiteSpace(textBoxOrganiztion1.Text) ||
-                string.IsNullOrWhiteSpace(textBoxLastPosition1.Text) ||
-                string.IsNullOrWhiteSpace(datePickerDateOfBirth.Text) ||
-                string.IsNullOrWhiteSpace(datePickerStartWork1.Text) ||
+                //string.IsNullOrWhiteSpace(textBoxOrganiztion1.Text) ||
+                //string.IsNullOrWhiteSpace(textBoxLastPosition1.Text) ||
+                //string.IsNullOrWhiteSpace(datePickerDateOfBirth.Text) ||
+                //string.IsNullOrWhiteSpace(datePickerStartWork1.Text) ||
                 string.IsNullOrWhiteSpace(datePickerEndWork1.Text) ||
                 string.IsNullOrWhiteSpace(comboBoxGender.Text) ||
                 string.IsNullOrWhiteSpace(comboBoxOccupation.Text) ||
@@ -180,7 +180,11 @@ namespace ResumeCreator
                     { "<teg40>", isButtonAddPushedTwice ? "В организации \"" : null},
                     { "<teg41>", isButtonAddPushedTwice ? "\" на должности \"" : null},
                     { "<teg42>", isButtonAddPushedTwice ? "\" c " : null},
-                    { "<teg43>", isButtonAddPushedTwice ? " по " : null}
+                    { "<teg43>", isButtonAddPushedTwice ? " по " : null},
+                    { "<teg44>", String.IsNullOrEmpty(textBoxOrganiztion1.Text) ? "Нет опыта работы" : "В организации \""},
+                    { "<teg45>", String.IsNullOrEmpty(textBoxLastPosition1.Text) ? null : "\" на должности \""},
+                    { "<teg46>", String.IsNullOrEmpty(datePickerStartWork1.Text) ? null : "\" c "},
+                    { "<teg47>", String.IsNullOrEmpty(datePickerEndWork1.Text) ? null : " по "},
                 };
                 
                 WordHelper wordHelper = new WordHelper("Sample.docx");
