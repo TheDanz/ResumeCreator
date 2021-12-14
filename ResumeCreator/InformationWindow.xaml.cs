@@ -58,10 +58,20 @@ namespace ResumeCreator
                 }
                 var date1 = new DateTime(year: 2007, month: 1, day: 1);
                 var date2 = new DateTime(year: 1921, month: 1, day: 1);
+                var date3 = new DateTime(year: 1935, month: 1, day: 1);
+                
                 if ((datePickerDateOfBirth.SelectedDate > date1) || (datePickerDateOfBirth.SelectedDate < date2))
                 {
                     throw new Exception("Некорректный возраст");
                 }
+                if ((datePickerStartWork1.SelectedDate > datePickerEndWork1.SelectedDate) || 
+                        (datePickerStartWork1.SelectedDate < date3) || 
+                        (datePickerStartWork1.SelectedDate > DateTime.Today) || (datePickerEndWork1.SelectedDate < date3) ||
+                        (datePickerEndWork1.SelectedDate > DateTime.Today))
+				{
+                    throw new Exception("Некорректные даты периода работы");
+				}
+
 
                 if (isButtonAddPushedOnce && (string.IsNullOrWhiteSpace(textBoxOrganiztion2.Text) ||
                     string.IsNullOrWhiteSpace(textBoxLastPosition2.Text) ||
@@ -71,6 +81,18 @@ namespace ResumeCreator
                 {
                     throw new ArgumentException();
                 }
+                if (isButtonAddPushedOnce)
+				{
+                    if ((datePickerStartWork2.SelectedDate > datePickerEndWork2.SelectedDate) ||
+                                            (datePickerStartWork2.SelectedDate < date3) ||
+                                            (datePickerStartWork2.SelectedDate > DateTime.Today) || 
+                                            (datePickerEndWork2.SelectedDate < date3) ||
+                                            (datePickerEndWork2.SelectedDate > DateTime.Today))
+                    {
+                        throw new Exception("Некорректные даты периода работы");
+                    }
+
+                }
                 if (isButtonAddPushedTwice && (string.IsNullOrWhiteSpace(textBoxOrganiztion3.Text) ||
                    string.IsNullOrWhiteSpace(textBoxLastPosition3.Text) ||
                    string.IsNullOrWhiteSpace(datePickerEndWork3.Text) ||
@@ -79,7 +101,18 @@ namespace ResumeCreator
                 {
                     throw new ArgumentException();
                 }
+                if (isButtonAddPushedTwice)
+                {
+                    if ((datePickerStartWork3.SelectedDate > datePickerEndWork3.SelectedDate) ||
+                                            (datePickerStartWork3.SelectedDate < date3) ||
+                                            (datePickerStartWork3.SelectedDate > DateTime.Today) || 
+                                            (datePickerEndWork3.SelectedDate < date3) ||
+                                            (datePickerEndWork3.SelectedDate > DateTime.Today))
+                    {
+                        throw new Exception("Некорректные даты периода работы");
+                    }
 
+                }
                 string richTextBoxInfo = new TextRange(richTextBoxAchievements.Document.ContentStart, richTextBoxAchievements.Document.ContentEnd).Text;
                 bool isRichTextBoxInfoEmpry = string.IsNullOrWhiteSpace(richTextBoxInfo);
 
@@ -194,6 +227,8 @@ namespace ResumeCreator
                 datePickerStartWork2.Visibility = Visibility.Visible;
                 textBoxOrganiztion2.Visibility = Visibility.Visible;
                 textBoxLastPosition2.Visibility = Visibility.Visible;
+                C2.Visibility = Visibility.Visible;
+                Po2.Visibility = Visibility.Visible;
                 isButtonAddPushedOnce = true;
             } 
             else
@@ -205,6 +240,8 @@ namespace ResumeCreator
                 datePickerStartWork3.Visibility = Visibility.Visible;
                 textBoxOrganiztion3.Visibility = Visibility.Visible;
                 textBoxLastPosition3.Visibility = Visibility.Visible;
+                C3.Visibility = Visibility.Visible;
+                Po3.Visibility = Visibility.Visible;
                 isButtonAddPushedTwice = true;
             }
         }
@@ -220,6 +257,8 @@ namespace ResumeCreator
                 datePickerStartWork3.Visibility = Visibility.Hidden;
                 textBoxOrganiztion3.Visibility = Visibility.Hidden;
                 textBoxLastPosition3.Visibility = Visibility.Hidden;
+                C3.Visibility = Visibility.Hidden;
+                Po3.Visibility = Visibility.Hidden;
                 datePickerEndWork3.Text = null;
                 datePickerStartWork3.Text = null;
                 textBoxOrganiztion3.Text = null;
@@ -234,6 +273,8 @@ namespace ResumeCreator
                 datePickerStartWork2.Visibility = Visibility.Hidden;
                 textBoxOrganiztion2.Visibility = Visibility.Hidden;
                 textBoxLastPosition2.Visibility = Visibility.Hidden;
+                C2.Visibility = Visibility.Hidden;
+                Po2.Visibility = Visibility.Hidden;
                 datePickerEndWork2.Text = null;
                 datePickerStartWork2.Text = null;
                 textBoxOrganiztion2.Text = null;
