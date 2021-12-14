@@ -60,7 +60,7 @@ namespace ResumeCreator
                 var date2 = new DateTime(year: 1921, month: 1, day: 1);
                 if ((datePickerDateOfBirth.SelectedDate > date1) || (datePickerDateOfBirth.SelectedDate < date2))
                 {
-                    throw new Exception("Неккоректный возраст");
+                    throw new Exception("Некорректный возраст");
                 }
 
                 if (isButtonAddPushedOnce && (string.IsNullOrWhiteSpace(textBoxOrganiztion2.Text) ||

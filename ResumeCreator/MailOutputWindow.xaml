@@ -8,11 +8,11 @@
         Title="ResumeCreator" Height="180" Width="200"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Background="BlanchedAlmond">
         <StackPanel Margin="10,10,10,90" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Content="Введите e-mail получателя:"/>
-            <TextBox Name="textBoxMailTo" TextWrapping="NoWrap"/>
+            <TextBox Name="textBoxMailTo" TextWrapping="NoWrap" BorderBrush="#FFFFFDFD"/>
         </StackPanel>
-        <Button Content="Отправить" Margin="100,110,10,10" Click="SendMessage_Click"/>
+        <Button Content="Отправить" Margin="100,110,10,10" Click="SendMessage_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB"/>
     </Grid>
 </Window>

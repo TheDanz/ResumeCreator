@@ -10,24 +10,24 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl>
-            <TabItem Header="Общая информация" FontWeight="Normal">
-                <Grid Background="#FFE5E5E5">
+            <TabItem Header="Общая информация" FontWeight="Normal" BorderBrush="#FFFFFDFD" Background="#FFF6EFEF" FontSize="13">
+                <Grid Background="#FFEBCD">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="146*"/>
                         <ColumnDefinition Width="251*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Name="textBoxPosition" HorizontalAlignment="Left" Margin="230,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
+                    <TextBox Name="textBoxPosition" HorizontalAlignment="Left" Margin="230,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2" BorderBrush="#FFFFFDFD"/>
                     <Label Content="Должность" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="180" Height="26" FontFamily="Segoe UI" FontWeight="Normal" FontStyle="Normal" FontStretch="Normal"/>
                     <Label Content="Желаемая зарплата" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
                     <Label Content="Электронная почта" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
-                    <TextBox Name="textBoxSalary" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
-                    <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="231,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
-                    <CheckBox Name ="checkBoxReadyToWorkOut" Content="Да/Нет" HorizontalAlignment="Left" Margin="230,246,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Width="180" Height="26" FontWeight="Normal"/>
+                    <TextBox Name="textBoxSalary" MaxLength="10" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2" BorderBrush="#FFFFFDFD"/>
+                    <TextBox Name="textBoxMail" HorizontalAlignment="Left" Margin="231,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2" BorderBrush="#FFFFFDFD"/>
+                    <CheckBox Name ="checkBoxReadyToWorkOut" Content="Да/Нет" HorizontalAlignment="Left" Margin="258,245,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <Label Content="Готовность к командировкам" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Width="202" Height="34" FontWeight="Normal" FontSize="14"/>
                     <Label Content="Телефон" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
-                    <TextBox Name="textBoxPhone" MaxLength="11" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2"/>
+                    <TextBox Name="textBoxPhone" MaxLength="11" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="230,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2" BorderBrush="#FFFFFDFD"/>
                     <Label Content="Занятость" HorizontalAlignment="Left" Margin="40,290,0,0" VerticalAlignment="Top" Height="26" Width="180" FontWeight="Normal"/>
-                    <ComboBox Name="comboBoxOccupation" HorizontalAlignment="Left" Margin="230,290,0,0" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2">
+                    <ComboBox Name="comboBoxOccupation" HorizontalAlignment="Left" Margin="230,290,0,0" VerticalAlignment="Top" Width="180" Height="26" Grid.ColumnSpan="2" BorderBrush="#FFFFFDFD">
                         <TextBlock>Полный рабочий день</TextBlock>
                         <TextBlock>Неполный рабочий день</TextBlock>
                     </ComboBox>
@@ -35,46 +35,67 @@
                     <Image Source="resources\resumeImage.png"  HorizontalAlignment="Left" Height="319" Margin="179,0,0,0" VerticalAlignment="Center" Width="317" Stretch="Fill" StretchDirection="Both" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Личная информация" FontWeight="Normal">
-                <Grid Background="#FFE5E5E5">
+            <TabItem Header="Личная информация" FontWeight="Normal" BorderBrush="#FFFFFDFD" FontSize="13">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFF6EFEF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FFEBCD">
                     <Label Content="Фамилия" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
                     <Label Content="Имя" HorizontalAlignment="Left" Margin="400,40,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
                     <Label Content="Отчество (при наличии)" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top"/>
-                    <TextBox Name="textBoxSecondName" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <TextBox Name="textBoxFirstName" HorizontalAlignment="Left" Margin="450,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <TextBox Name="textBoxThirdName" HorizontalAlignment="Left" Margin="200,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
+                    <TextBox Name="textBoxSecondName" MaxLength="20" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <TextBox Name="textBoxFirstName" MaxLength="13" HorizontalAlignment="Left" Margin="450,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <TextBox Name="textBoxThirdName" MaxLength="20" HorizontalAlignment="Left" Margin="200,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
                     <Label Content="Город" HorizontalAlignment="Left" Margin="400,140,0,0" VerticalAlignment="Top" Height="26"/>
-                    <TextBox Name="textBoxCity" HorizontalAlignment="Left" Margin="450,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-                    <CheckBox Name="checkBoxReadyToMove" Content="Да/Нет"  HorizontalAlignment="Left" Margin="200,246,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+                    <TextBox Name="textBoxCity" MaxLength="25" HorizontalAlignment="Left" Margin="450,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <Label Content="Готовность к переезду" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Height="34" Width="159" RenderTransformOrigin="0.5,0.5">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.126"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                    <CheckBox Name="checkBoxReadyToMove" Content="Да/Нет"  HorizontalAlignment="Left" Margin="224,244,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Height="45" Width="140"/>
                     <DatePicker Name="datePickerDateOfBirth" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDateFormat="Short" Width="140"/>
                     <Label Content="Пол" HorizontalAlignment="Left" Margin="400,90,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
-                    <ComboBox Name="comboBoxGender" HorizontalAlignment="Left" Margin="450,90,0,0" VerticalAlignment="Top" Width="140" Height="26">
+                    <ComboBox Name="comboBoxGender" HorizontalAlignment="Left" Margin="450,90,0,0" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD">
                         <TextBlock>Мужской</TextBlock>
                         <TextBlock>Женский</TextBlock>
                     </ComboBox>
                     <Label Content="Семейное положение" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-                    <ComboBox Name="comboBoxMarry" HorizontalAlignment="Left" Margin="200,140,0,0" VerticalAlignment="Top" Width="140" Height="26">
+                    <ComboBox Name="comboBoxMarry" HorizontalAlignment="Left" Margin="200,140,0,0" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD">
                         <TextBlock>Не замужем/Не женат</TextBlock>
                         <TextBlock>Замужем/Женат</TextBlock>
                     </ComboBox>
-                    <Label Content="Дети" HorizontalAlignment="Left" Margin="400,190,0,0" VerticalAlignment="Top" Height="26" Width="40"/>
+                    <Label Content="Дети" HorizontalAlignment="Left" Margin="400,190,0,0" VerticalAlignment="Top" Height="27" Width="40"/>
                     <CheckBox Name="checkBoxChildren" Content="Есть/Нет" HorizontalAlignment="Left" Margin="450,196,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Образование" FontWeight="Normal">
-                <Grid Background="#FFE5E5E5">
+            <TabItem Header="Образование" FontWeight="Normal" BorderBrush="#FFFFFDFD" FontSize="13">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFF6EFEF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FFEBCD">
                     <Label Content="Учебное заведение" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
                     <Label Content="Год окончания" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-                    <TextBox Name="textBoxUniversity" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <TextBox Name="textBoxУearOfGraduation" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="200,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <TextBox Name="textBoxFaculty" HorizontalAlignment="Left" Margin="200,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <TextBox Name="textBoxSpeciality" HorizontalAlignment="Left" Margin="200,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26"/>
-                    <ComboBox Name ="comboBoxFormOfEducation" HorizontalAlignment="Left" Margin="200,240,0,0" VerticalAlignment="Top" Width="140" Height="26">
+                    <Label Content="Факультет" HorizontalAlignment="Left" Margin="40,140,0,0" VerticalAlignment="Top" Height="37" Width="140"/>
+                    <Label Content="Специальность" HorizontalAlignment="Left" Margin="40,190,0,0" VerticalAlignment="Top" Width="140" Height="45"/>
+                    <Label Content="Форма обучения" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" Height="39" Width="140"/>
+                    <TextBox Name="textBoxUniversity" HorizontalAlignment="Left" Margin="200,40,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <TextBox Name="textBoxУearOfGraduation" MaxLength="4" PreviewTextInput="textBoxOnlyNumbers" HorizontalAlignment="Left" Margin="200,90,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <TextBox Name="textBoxFaculty" MaxLength="30" HorizontalAlignment="Left" Margin="200,140,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <TextBox Name="textBoxSpeciality" MaxLength="45" HorizontalAlignment="Left" Margin="200,190,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="140" Height="26" BorderBrush="#FFFFFDFD"/>
+                    <ComboBox Name ="comboBoxFormOfEducation"  HorizontalAlignment="Left" Margin="200,240,0,0" VerticalAlignment="Top" Width="140" Height="26">
                         <TextBlock>Очно-заочная</TextBlock>
                         <TextBlock>Заочная</TextBlock>
                         <TextBlock>Очная</TextBlock>
@@ -82,37 +103,59 @@
                     <Image Source="resources\resumeImage2.png" HorizontalAlignment="Left" Height="239" Margin="417,40,0,0" VerticalAlignment="Top" Width="347"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Опыт работы" FontWeight="Normal">
-                <Grid Background="#FFE5E5E5">
-                    <Label Name="labelOrganization1" Content="Организация" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <Label Name="labelPosition1" Content="Должность" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <Label Name="labelWorkPerion1" Content="Период работы" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
-                    <DatePicker Name="datePickerStartWork1" HorizontalAlignment="Left" Margin="115,90,0,0" VerticalAlignment="Top" Width="110"/>
-                    <DatePicker Name="datePickerEndWork1" HorizontalAlignment="Left" Margin="115,120,0,0" VerticalAlignment="Top" Width="110"/>
-                    <TextBox Name="textBoxOrganiztion1" HorizontalAlignment="Left" Margin="115,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
-                    <TextBox Name="textBoxLastPosition1" HorizontalAlignment="Left" Margin="115,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
+            <TabItem Header="Опыт работы" FontWeight="Normal" BorderBrush="#FFFFFDFD" FontSize="13">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFF6EFEF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FFEBCD">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="31*"/>
+                        <ColumnDefinition Width="218*"/>
+                        <ColumnDefinition Width="148*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Name="labelOrganization1" Content="Организация" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="35" Width="100" Grid.ColumnSpan="2"/>
+                    <Label Name="labelPosition1" Content="Должность" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.ColumnSpan="2"/>
+                    <Label Name="labelWorkPerion1" Content="Период работы" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="100" Height="26" Grid.ColumnSpan="2"/>
+                    <DatePicker Name="datePickerStartWork1" HorizontalAlignment="Left" Margin="53,90,0,0" VerticalAlignment="Top" Width="110" Grid.Column="1"/>
+                    <DatePicker Name="datePickerEndWork1" HorizontalAlignment="Left" Margin="53,120,0,0" VerticalAlignment="Top" Width="110" Grid.Column="1"/>
+                    <TextBox Name="textBoxOrganiztion1" MaxLength="25" HorizontalAlignment="Left" Margin="53,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26" BorderBrush="#FFFFFDFD" Grid.Column="1"/>
+                    <TextBox Name="textBoxLastPosition1" HorizontalAlignment="Left" Margin="53,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26" BorderBrush="#FFFFFDFD" Grid.Column="1"/>
 
-                    <Label Name="labelOrganization2" Content="Организация" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <Label Name="labelPosition2" Content="Должность" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <Label Name="labelWorkPerion2" Content="Период работы" Visibility="Hidden" HorizontalAlignment="Left" Margin="250,100,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <DatePicker Name="datePickerStartWork2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,90,0,0" VerticalAlignment="Top" Width="110"/>
-                    <DatePicker Name="datePickerEndWork2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,120,0,0" VerticalAlignment="Top" Width="110"/>
-                    <TextBox Name="textBoxOrganiztion2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
-                    <TextBox Name="textBoxLastPosition2" Visibility="Hidden" HorizontalAlignment="Left" Margin="350,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
+                    <Label Name="labelOrganization2" Content="Организация" Visibility="Visible" HorizontalAlignment="Left" Margin="188,20,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="1"/>
+                    <Label Name="labelPosition2" Content="Должность" Visibility="Visible" HorizontalAlignment="Left" Margin="188,60,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="1"/>
+                    <Label Name="labelWorkPerion2" Content="Период работы" Visibility="Visible" HorizontalAlignment="Left" Margin="188,100,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="1"/>
+                    <DatePicker Name="datePickerStartWork2" Visibility="Visible" HorizontalAlignment="Left" Margin="288,90,0,0" VerticalAlignment="Top" Width="110" Grid.Column="1"/>
+                    <DatePicker Name="datePickerEndWork2" Visibility="Visible" HorizontalAlignment="Left" Margin="288,120,0,0" VerticalAlignment="Top" Width="110" Grid.Column="1"/>
+                    <TextBox Name="textBoxOrganiztion2" Visibility="Visible" HorizontalAlignment="Left" Margin="288,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26" Grid.Column="1"/>
+                    <TextBox Name="textBoxLastPosition2" Visibility="Visible" HorizontalAlignment="Left" Margin="288,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26" Grid.Column="1"/>
 
-                    <Label Name="labelOrganization3" Content="Организация" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,20,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <Label Name="labelPosition3" Content="Должность" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,60,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <Label Name="labelWorkPerion3" Content="Период работы" Visibility="Hidden" HorizontalAlignment="Left" Margin="500,100,0,0" VerticalAlignment="Top" Height="26" Width="100"/>
-                    <DatePicker Name="datePickerStartWork3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,90,0,0" VerticalAlignment="Top" Width="110"/>
-                    <DatePicker Name="datePickerEndWork3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,120,0,0" VerticalAlignment="Top" Width="110"/>
-                    <TextBox Name="textBoxOrganiztion3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
-                    <TextBox Name="textBoxLastPosition3" Visibility="Hidden" HorizontalAlignment="Left" Margin="600,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26"/>
+                    <Label Name="labelOrganization3" Content="Организация" Visibility="Visible" HorizontalAlignment="Left" Margin="2,20,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="2"/>
+                    <Label Name="labelPosition3" Content="Должность" Visibility="Visible" HorizontalAlignment="Left" Margin="2,60,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="2"/>
+                    <Label Name="labelWorkPerion3" Content="Период работы" Visibility="Visible" HorizontalAlignment="Left" Margin="2,0,0,229" VerticalAlignment="Bottom" Height="26" Width="100" Grid.Column="2"/>
+                    <DatePicker Name="datePickerStartWork3" Visibility="Visible" HorizontalAlignment="Left" Margin="102,90,0,0" VerticalAlignment="Top" Width="110" Grid.Column="2"/>
+                    <DatePicker Name="datePickerEndWork3" Visibility="Visible" HorizontalAlignment="Left" Margin="102,120,0,0" VerticalAlignment="Top" Width="110" Grid.Column="2"/>
+                    <TextBox Name="textBoxOrganiztion3" Visibility="Visible" HorizontalAlignment="Left" Margin="102,20,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26" Grid.Column="2"/>
+                    <TextBox Name="textBoxLastPosition3" Visibility="Visible" HorizontalAlignment="Left" Margin="102,60,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="110" Height="26" Grid.Column="2"/>
+                    <Button Content="Добавить" HorizontalAlignment="Left" Margin="20,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Add_Click" Background="#FFEBEBEB" BorderBrush="#FFFFFDFD" FontSize="14" Grid.ColumnSpan="2"/>
+                    <Button Content="Удалить" HorizontalAlignment="Left" Margin="38,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Delete_Click" Background="#FFEBEBEB" BorderBrush="#FFFFFDFD" Grid.Column="1"/>
+                </Grid>
 
-                    <RichTextBox Name="richTextBoxAchievements" Margin="20,180,20,70" Block.LineHeight="2"/>
-                    <Label Content="Достижения" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top" Width="100" Height="26"/>
-                    <Button Content="Готово" HorizontalAlignment="Left" Margin="704,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Ready_Click"/>
-                    <Button Content="Добавить" HorizontalAlignment="Left" Margin="20,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Add_Click"/>
-                    <Button Content="Удалить" HorizontalAlignment="Left" Margin="100,300,0,0" VerticalAlignment="Top" Height="30" Width="70" Click="Delete_Click"/>
+            </TabItem>
+            <TabItem Header="Дополнительная информация" FontWeight="Normal" BorderBrush="#FFFFFDFD" FontSize="13">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFF6EFEF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="#FFEBCD">
+                    <RichTextBox Name="richTextBoxAchievements" Margin="20,77,20,115" Block.LineHeight="2"/>
+                    <Label Content="Достижения" HorizontalAlignment="Left" Margin="20,34,0,0" VerticalAlignment="Top" Width="100" Height="38" FontSize="14"/>
+                    <Button Content="Готово" HorizontalAlignment="Left" Margin="673,302,0,0" VerticalAlignment="Top" Height="28" Width="101" Click="Ready_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB" FontSize="14"/>
+
                 </Grid>
             </TabItem>
         </TabControl>

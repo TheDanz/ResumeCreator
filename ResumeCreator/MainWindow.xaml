@@ -8,16 +8,17 @@
         Title="ResumeCreator" Height="400" Width="800" 
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid>
-        <Label Content="Welcome to ResumeCreator" FontFamily="Helvetica" FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" Margin="0,0,0,300"/>
+    <Grid Background="BlanchedAlmond">
+        
+        <Label Content="Добро пожаловать в ResumeCreator!" FontFamily="Helvetica" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" Margin="0,23,0,300" Width="554"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="CreateNewResume_Click">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="CreateNewResume_Click" Background="#FFEBEBEB" BorderBrush="#FFFFFDFD">
                 <StackPanel>
                     <TextBlock Text="Создать новое" HorizontalAlignment="Center"/>
                     <TextBlock Text="резюме" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="UploadAndChangeResume_Click">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="UploadAndChangeResume_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB">
                 <StackPanel>
                     <TextBlock Text="Загрузить и" HorizontalAlignment="Center"/>
                     <TextBlock Text="изменить резюме" HorizontalAlignment="Center"/>

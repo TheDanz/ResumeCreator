@@ -9,32 +9,32 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         Closed="DoneResumeWindow_Closed">
-    <Grid>
-        <Label Content="Резюме готово" FontFamily="Helvetica" FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" Margin="0,0,0,300"/>
+    <Grid Background="BlanchedAlmond">
+        <Label Content="Ваше резюме готово!" FontFamily="Helvetica" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Margin="0,26,0,294"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="DisplayOutput_Click">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="DisplayOutput_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB">
                 <StackPanel>
                     <TextBlock Text="Открыть резюме в" HorizontalAlignment="Center"/>
                     <TextBlock Text="отдельном окне" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="PDFOutput_Click">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="PDFOutput_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB">
                 <StackPanel>
                     <TextBlock Text="Сохранить резюме" HorizontalAlignment="Center"/>
                     <TextBlock Text="в PDF файл" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="MailOutput_Click">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="MailOutput_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB">
                 <StackPanel>
                     <TextBlock Text="Отправить резюме" HorizontalAlignment="Center"/>
                     <TextBlock Text="по почте" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="SaveFileForFurtherModification_Click">
+            <Button FontFamily="Helvetica" FontWeight="Bold" FontSize="20" Height="170" Width="200" Click="SaveFileForFurtherModification_Click" BorderBrush="#FFFFFDFD" Background="#FFEBEBEB">
                 <StackPanel>
                     <TextBlock Text="Сохранить" HorizontalAlignment="Center"/>
                     <TextBlock Text="файл для" HorizontalAlignment="Center"/>
-                    <TextBlock Text="дальшнейшего" HorizontalAlignment="Center"/>
+                    <TextBlock Text="дальнейшего" HorizontalAlignment="Center"/>
                     <TextBlock Text="изменения" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
